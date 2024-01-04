@@ -1,0 +1,10 @@
+{
+  "typescript": {
+    "type": "page",
+    "display": "hidden"
+  },
+  "curl": {
+    "type": "page",
+    "display": "hidden"
+  }
+}

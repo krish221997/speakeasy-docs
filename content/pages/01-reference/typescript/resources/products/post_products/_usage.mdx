@@ -1,0 +1,350 @@
+
+<CH.Code>
+```typescript PostProducts.ts
+import { Client } from "integrationos/node";
+import {
+  PostProductsProductsStatus,
+  PostProductsProductsType,
+  PostProductsSkuValidation,
+  PostProductsType,
+} from "integrationos/node/models/operations";
+
+async function run() {
+  const sdk = new Client();
+
+  const xIntegrationosSecret = "string";
+  const xIntegrationosConnectionKey = "string";
+  const requestBody = {
+    id: "<ID>",
+    title: "string",
+    description: "Extended exuding info-mediaries",
+    prices: [
+      {},
+    ],
+    sku: "string",
+    skuValidation: PostProductsSkuValidation.None,
+    images: [
+      {
+        tags: [
+          "string",
+        ],
+      },
+    ],
+    variants: [
+      {
+        dimensions: {},
+      },
+    ],
+    options: [
+      {
+        values: [
+          "string",
+        ],
+      },
+    ],
+    categories: [
+      "string",
+    ],
+    tags: [
+      "string",
+    ],
+    vendor: "string",
+    inventoryQuantity: 8121.69,
+    inventoryLocation: {
+      address: {
+        geoLocation: {},
+        customFields: [
+          {},
+        ],
+      },
+      contactInformation: [
+        {},
+      ],
+    },
+    availableForSale: false,
+    dimensions: {},
+    weight: 5288.95,
+    weightUnit: "string",
+    type: "string",
+    metaTitle: "string",
+    metaDescription: "string",
+    seoKeywords: [
+      "string",
+    ],
+    slug: "string",
+    customFields: [
+      {},
+    ],
+    isDownloadable: false,
+    downloadFiles: [
+      {
+        metadata: {},
+        associatedWith: {},
+        permissions: {},
+      },
+    ],
+    relatedProducts: [
+      "string",
+    ],
+    createdAt: 4799.77,
+    updatedAt: 5680.45,
+    publishedAt: 3927.85,
+    status: PostProductsProductsStatus.Deleted,
+    tax: {
+      taxDetails: {},
+      customFields: [
+        {},
+      ],
+    },
+    localizations: [
+      {},
+    ],
+  };
+  
+  const res = await sdk.products.postProducts(xIntegrationosSecret, xIntegrationosConnectionKey, requestBody);
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "status": "string",
+    "statusCode": 400,
+    "unified": {
+      "id": "<ID>",
+      "title": "string",
+      "description": "Organized 4th generation moderator",
+      "prices": [
+        {
+          "amount": 9689.62,
+          "currency": "string"
+        }
+      ],
+      "sku": "string",
+      "images": [
+        {
+          "id": "string",
+          "src": "string",
+          "altText": "string",
+          "width": 3209.97,
+          "height": 4314.18,
+          "thumbnailSrc": "string",
+          "caption": "string",
+          "title": "string",
+          "tags": [
+            "string"
+          ],
+          "createdAt": 8965.47,
+          "updatedAt": 1412.64,
+          "active": false,
+          "deleted": false
+        }
+      ],
+      "variants": [
+        {
+          "id": "string",
+          "productId": 3675.62,
+          "title": "string",
+          "sku": "string",
+          "price": 972.6,
+          "compareAtPrice": 4358.65,
+          "inventoryQuantity": 9840.43,
+          "weight": 8919.24,
+          "weightUnit": "string",
+          "requiresShipping": false,
+          "taxable": false,
+          "barcode": "string",
+          "imageId": 2603.41,
+          "dimensions": {},
+          "createdAt": 8061.94,
+          "updatedAt": 5370.23,
+          "active": false,
+          "deleted": false
+        }
+      ],
+      "options": [
+        {
+          "id": "string",
+          "productId": 4479.26,
+          "name": "string",
+          "values": [
+            "string"
+          ],
+          "createdAt": 1002.26,
+          "updatedAt": 995.69
+        }
+      ],
+      "categories": [
+        "string"
+      ],
+      "tags": [
+        "string"
+      ],
+      "vendor": "string",
+      "inventoryQuantity": 9194.83,
+      "inventoryLocation": {
+        "locationId": "string",
+        "name": "string",
+        "address": {
+          "id": "string",
+          "contactId": "string",
+          "accountId": "string",
+          "firstName": "string",
+          "lastName": "string",
+          "name": "string",
+          "companyName": "string",
+          "email": "string",
+          "phone": "string",
+          "street": "string",
+          "addressLine2": "string",
+          "city": "string",
+          "province": "string",
+          "region": "string",
+          "postalCode": "string",
+          "postalCodeExtension": "string",
+          "country": "string",
+          "countryCode": "string",
+          "geoLocation": {
+            "latitude": 7142.42,
+            "longitude": 4692.49,
+            "altitude": 9988.48,
+            "accuracy": 8411.4,
+            "altitudeAccuracy": 1494.48,
+            "heading": 9046.48,
+            "speed": 8681.26,
+            "timestamp": 375.59
+          },
+          "customFields": [
+            {
+              "id": "string",
+              "fieldName": "string",
+              "fieldValue": "string"
+            }
+          ],
+          "subdivisionCode": "string"
+        },
+        "contactInformation": [
+          {}
+        ],
+        "quantity": 6155.6,
+        "operationalHours": "string",
+        "isActive": false,
+        "createdAt": 1668.47,
+        "updatedAt": 1238.2,
+        "deleted": false
+      },
+      "availableForSale": false,
+      "dimensions": {
+        "height": 7790.51,
+        "length": 8480.09,
+        "width": 8649.34
+      },
+      "weight": 8073.19,
+      "weightUnit": "string",
+      "type": "string",
+      "metaTitle": "string",
+      "metaDescription": "string",
+      "seoKeywords": [
+        "string"
+      ],
+      "slug": "string",
+      "customFields": [
+        {
+          "id": "string",
+          "fieldName": "string",
+          "fieldValue": "string"
+        }
+      ],
+      "isDownloadable": false,
+      "downloadFiles": [
+        {
+          "id": "string",
+          "fileName": "string",
+          "fileSize": 5691.01,
+          "fileType": "string",
+          "url": "string",
+          "thumbnailUrl": "string",
+          "previewUrl": "string",
+          "content": "string",
+          "createdAt": 1399.72,
+          "updatedAt": 4071.83,
+          "metadata": {},
+          "associatedWith": {},
+          "permissions": {}
+        }
+      ],
+      "relatedProducts": [
+        "string"
+      ],
+      "createdAt": 332.22,
+      "updatedAt": 691.67,
+      "publishedAt": 9825.75,
+      "tax": {
+        "taxCode": "string",
+        "taxable": false,
+        "taxRate": 3732.91,
+        "currency": "string",
+        "country": "string",
+        "region": "string",
+        "description": "string",
+        "taxAmount": 4535.43,
+        "taxDetails": {},
+        "customFields": [
+            {
+              "id": "string",
+              "fieldName": "string",
+              "fieldValue": "string"
+            }
+          ],
+        "createdAt": 7220.56,
+        "updatedAt": 505.88,
+        "active": false,
+        "deleted": false
+      },
+      "localizations": [
+        {
+          "locale": "string",
+          "title": "string",
+          "description": "string",
+          "metaTitle": "string",
+          "metaDescription": "string"
+        }
+      ]
+    },
+    "passthrough": {},
+    "meta": {
+        "timestamp": 866383,
+        "latency": 365496,
+        "platformRateLimitRemaining": 975522,
+        "rateLimitRemaining": 16627,
+        "cache": {
+          "hit": false,
+          "ttl": 855804,
+          "key": "string"
+        },
+        "transactionKey": "string",
+        "txn": "string",
+        "platform": "string",
+        "platformVersion": "string",
+        "connectionDefinitionKey": "string",
+        "action": "string",
+        "commonModel": "string",
+        "commonModelVersion": "string",
+        "connectionKey": "string",
+        "hash": "string",
+        "heartbeats": [
+          "string"
+        ],
+        "totalTransactions": 230742
+      }
+  }
+```
+</CH.Code>

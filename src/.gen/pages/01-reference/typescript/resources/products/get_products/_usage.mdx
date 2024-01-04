@@ -1,0 +1,264 @@
+
+<CH.Code>
+```typescript GetProducts.ts
+import { Client } from "integrationos/node";
+
+async function run() {
+  const sdk = new Client();
+
+  const xIntegrationosSecret = "string";
+  const xIntegrationosConnectionKey = "string";
+  
+  const res = await sdk.products.getProducts(xIntegrationosSecret, xIntegrationosConnectionKey);
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "status": "string",
+    "statusCode": 500,
+    "unified": [
+      {
+        "id": "<ID>",
+        "title": "string",
+        "description": "Organized foreground matrices",
+        "prices": [
+          {
+            "amount": 8960.39,
+            "currency": "string"
+          }
+        ],
+        "sku": "string",
+        "images": [
+          {
+            "id": "string",
+            "src": "string",
+            "altText": "string",
+            "width": 6389.21,
+            "height": 2230.81,
+            "thumbnailSrc": "string",
+            "caption": "string",
+            "title": "string",
+            "tags": [
+              "string"
+            ],
+            "createdAt": 9527.49,
+            "updatedAt": 6800.56,
+            "active": false,
+            "deleted": false
+          }
+        ],
+        "variants": [
+          {
+            "id": "string",
+            "productId": 4471.25,
+            "title": "string",
+            "sku": "string",
+            "price": 4491.98,
+            "compareAtPrice": 8464.09,
+            "inventoryQuantity": 9785.71,
+            "weight": 6994.79,
+            "weightUnit": "string",
+            "requiresShipping": false,
+            "taxable": false,
+            "barcode": "string",
+            "imageId": 1162.02,
+            "dimensions": {},
+            "createdAt": 2974.37,
+            "updatedAt": 7670.24,
+            "active": false,
+            "deleted": false
+          }
+        ],
+        "options": [
+          {
+            "id": "string",
+            "productId": 4118.2,
+            "name": "string",
+            "values": [
+              "string"
+            ],
+            "createdAt": 3965.06,
+            "updatedAt": 6754.39
+          }
+        ],
+        "categories": [
+          "string"
+        ],
+        "tags": [
+          "string"
+        ],
+        "vendor": "string",
+        "inventoryQuantity": 8811.04,
+        "inventoryLocation": {
+          "locationId": "string",
+          "name": "string",
+          "address": {
+            "id": "string",
+            "contactId": "string",
+            "accountId": "string",
+            "firstName": "string",
+            "lastName": "string",
+            "name": "string",
+            "companyName": "string",
+            "email": "string",
+            "phone": "string",
+            "street": "string",
+            "addressLine2": "string",
+            "city": "string",
+            "province": "string",
+            "region": "string",
+            "postalCode": "string",
+            "postalCodeExtension": "string",
+            "country": "string",
+            "countryCode": "string",
+            "geoLocation": {
+              "latitude": 5812.73,
+              "longitude": 3132.18,
+              "altitude": 8817.36,
+              "accuracy": 9654.17,
+              "altitudeAccuracy": 6925.32,
+              "heading": 5884.65,
+              "speed": 7252.55,
+              "timestamp": 6596.69
+            },
+            "customFields": [
+              {
+                "id": "string",
+                "fieldName": "string",
+                "fieldValue": "string"
+              }
+            ],
+            "subdivisionCode": "string"
+          },
+          "contactInformation": [
+            {}
+          ],
+          "quantity": 9560.84,
+          "operationalHours": "string",
+          "isActive": false,
+          "createdAt": 2305.33,
+          "updatedAt": 6439.9,
+          "deleted": false
+        },
+        "availableForSale": false,
+        "dimensions": {
+          "height": 3948.69,
+          "length": 4238.55,
+          "width": 6188.09
+        },
+        "weight": 6063.93,
+        "weightUnit": "string",
+        "type": "string",
+        "metaTitle": "string",
+        "metaDescription": "string",
+        "seoKeywords": [
+          "string"
+        ],
+        "slug": "string",
+        "customFields": [
+          {
+            "id": "string",
+            "fieldName": "string",
+            "fieldValue": "string"
+          }
+        ],
+        "isDownloadable": false,
+        "downloadFiles": [
+          {
+            "id": "string",
+            "fileName": "string",
+            "fileSize": 191.93,
+            "fileType": "string",
+            "url": "string",
+            "thumbnailUrl": "string",
+            "previewUrl": "string",
+            "content": "string",
+            "createdAt": 4701.32,
+            "updatedAt": 3015.75,
+            "metadata": {},
+            "associatedWith": {},
+            "permissions": {}
+          }
+        ],
+        "relatedProducts": [
+          "string"
+        ],
+        "createdAt": 7160.75,
+        "updatedAt": 6601.74,
+        "publishedAt": 2879.91,
+        "tax": {
+          "taxCode": "string",
+          "taxable": false,
+          "taxRate": 3834.62,
+          "currency": "string",
+          "country": "string",
+          "region": "string",
+          "description": "string",
+          "taxAmount": 6180.16,
+          "taxDetails": {},
+          "customFields": [
+              {
+                "id": "string",
+                "fieldName": "string",
+                "fieldValue": "string"
+              }
+            ],
+          "createdAt": 4287.69,
+          "updatedAt": 8784.53,
+          "active": false,
+          "deleted": false
+        },
+        "localizations": [
+          {
+            "locale": "string",
+            "title": "string",
+            "description": "string",
+            "metaTitle": "string",
+            "metaDescription": "string"
+          }
+        ]
+      }
+    ],
+    "passthrough": {},
+    "meta": {
+        "timestamp": 135474,
+        "latency": 102863,
+        "platformRateLimitRemaining": 298282,
+        "rateLimitRemaining": 92373,
+        "cache": {
+          "hit": false,
+          "ttl": 569965,
+          "key": "string"
+        },
+        "transactionKey": "string",
+        "txn": "string",
+        "platform": "string",
+        "platformVersion": "string",
+        "connectionDefinitionKey": "string",
+        "action": "string",
+        "commonModel": "string",
+        "commonModelVersion": "string",
+        "connectionKey": "string",
+        "hash": "string",
+        "heartbeats": [
+          "string"
+        ],
+        "totalTransactions": 354047
+      },
+    "pagination": {
+        "cursor": "string",
+        "limit": 590873
+      }
+  }
+```
+</CH.Code>

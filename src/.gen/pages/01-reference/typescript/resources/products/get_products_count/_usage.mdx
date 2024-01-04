@@ -1,0 +1,60 @@
+
+<CH.Code>
+```typescript GetProductsCount.ts
+import { Client } from "integrationos/node";
+
+async function run() {
+  const sdk = new Client();
+
+  const xIntegrationosSecret = "string";
+  const xIntegrationosConnectionKey = "string";
+  
+  const res = await sdk.products.getProductsCount(xIntegrationosSecret, xIntegrationosConnectionKey);
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "status": "string",
+    "statusCode": 200,
+    "unified": {
+      "count": 764912
+    },
+    "passthrough": {},
+    "meta": {
+        "timestamp": 359978,
+        "latency": 944124,
+        "platformRateLimitRemaining": 729991,
+        "rateLimitRemaining": 749999,
+        "cache": {
+          "hit": false,
+          "ttl": 171629,
+          "key": "string"
+        },
+        "transactionKey": "string",
+        "txn": "string",
+        "platform": "string",
+        "platformVersion": "string",
+        "connectionDefinitionKey": "string",
+        "action": "string",
+        "commonModel": "string",
+        "commonModelVersion": "string",
+        "connectionKey": "string",
+        "hash": "string",
+        "heartbeats": [
+          "string"
+        ],
+        "totalTransactions": 339404
+      }
+  }
+```
+</CH.Code>

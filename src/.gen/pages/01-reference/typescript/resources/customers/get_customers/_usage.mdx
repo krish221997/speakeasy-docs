@@ -1,0 +1,165 @@
+
+<CH.Code>
+```typescript GetCustomers.ts
+import { Client } from "integrationos/node";
+
+async function run() {
+  const sdk = new Client();
+
+  const xIntegrationosSecret = "string";
+  const xIntegrationosConnectionKey = "string";
+  
+  const res = await sdk.customers.getCustomers(xIntegrationosSecret, xIntegrationosConnectionKey);
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "status": "string",
+    "statusCode": 400,
+    "unified": [
+      {
+        "id": "<ID>",
+        "title": "string",
+        "fullName": "string",
+        "firstName": "string",
+        "middleName": "string",
+        "lastName": "string",
+        "email": "Kale_Welch10@gmail.com",
+        "phoneNumber": "string",
+        "dateOfBirth": 4146.62,
+        "addresses": [
+          {
+            "id": "string",
+            "contactId": "string",
+            "accountId": "string",
+            "firstName": "string",
+            "lastName": "string",
+            "name": "string",
+            "companyName": "string",
+            "email": "string",
+            "phone": "string",
+            "street": "string",
+            "addressLine2": "string",
+            "city": "string",
+            "province": "string",
+            "region": "string",
+            "postalCode": "string",
+            "postalCodeExtension": "string",
+            "country": "string",
+            "countryCode": "string",
+            "geoLocation": {},
+            "customFields": [
+                {}
+              ],
+            "subdivisionCode": "string"
+          }
+        ],
+        "defaultAddress": {
+          "id": "string",
+          "contactId": "string",
+          "accountId": "string",
+          "firstName": "string",
+          "lastName": "string",
+          "name": "string",
+          "companyName": "string",
+          "email": "string",
+          "phone": "string",
+          "street": "string",
+          "addressLine2": "string",
+          "city": "string",
+          "province": "string",
+          "region": "string",
+          "postalCode": "string",
+          "postalCodeExtension": "string",
+          "country": "string",
+          "countryCode": "string",
+          "geoLocation": {
+            "latitude": 1863.32,
+            "longitude": 7742.34,
+            "altitude": 7369.18,
+            "accuracy": 4561.5,
+            "altitudeAccuracy": 2165.5,
+            "heading": 5684.34,
+            "speed": 1352.18,
+            "timestamp": 187.89
+          },
+          "customFields": [
+            {
+              "id": "string",
+              "fieldName": "string",
+              "fieldValue": "string"
+            }
+          ],
+          "subdivisionCode": "string"
+        },
+        "company": "Cormier - Moore",
+        "currency": "Dominican Peso",
+        "notes": "string",
+        "createdAt": 6169.34,
+        "updatedAt": 3864.89,
+        "customerSegment": "string",
+        "loyaltyProgramMembership": "string",
+        "tags": [
+          "string"
+        ],
+        "metadata": "string",
+        "socialProfiles": [
+          {
+            "username": "string",
+            "displayName": "string",
+            "url": "string",
+            "avatarUrl": "string",
+            "email": "string",
+            "additionalInfo": {},
+            "createdAt": 3595.08,
+            "updatedAt": 6130.64,
+            "active": false,
+            "deleted": false
+          }
+        ],
+        "source": "string"
+      }
+    ],
+    "passthrough": {},
+    "meta": {
+        "timestamp": 437032,
+        "latency": 902349,
+        "platformRateLimitRemaining": 697631,
+        "rateLimitRemaining": 99280,
+        "cache": {
+          "hit": false,
+          "ttl": 60225,
+          "key": "string"
+        },
+        "transactionKey": "string",
+        "txn": "string",
+        "platform": "string",
+        "platformVersion": "string",
+        "connectionDefinitionKey": "string",
+        "action": "string",
+        "commonModel": "string",
+        "commonModelVersion": "string",
+        "connectionKey": "string",
+        "hash": "string",
+        "heartbeats": [
+          "string"
+        ],
+        "totalTransactions": 969810
+      },
+    "pagination": {
+        "cursor": "string",
+        "limit": 666767
+      }
+  }
+```
+</CH.Code>

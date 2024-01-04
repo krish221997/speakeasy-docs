@@ -1,0 +1,259 @@
+
+<CH.Code>
+```typescript GetProductsId.ts
+import { Client } from "integrationos/node";
+
+async function run() {
+  const sdk = new Client();
+
+  const id = "string";
+  const xIntegrationosSecret = "string";
+  const xIntegrationosConnectionKey = "string";
+  
+  const res = await sdk.products.getProductsId(id, xIntegrationosSecret, xIntegrationosConnectionKey);
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "status": "string",
+    "statusCode": 200,
+    "unified": {
+      "id": "<ID>",
+      "title": "string",
+      "description": "Compatible mobile software",
+      "prices": [
+        {
+          "amount": 6736.6,
+          "currency": "string"
+        }
+      ],
+      "sku": "string",
+      "images": [
+        {
+          "id": "string",
+          "src": "string",
+          "altText": "string",
+          "width": 9719.45,
+          "height": 9764.6,
+          "thumbnailSrc": "string",
+          "caption": "string",
+          "title": "string",
+          "tags": [
+            "string"
+          ],
+          "createdAt": 4686.51,
+          "updatedAt": 5096.24,
+          "active": false,
+          "deleted": false
+        }
+      ],
+      "variants": [
+        {
+          "id": "string",
+          "productId": 9767.62,
+          "title": "string",
+          "sku": "string",
+          "price": 557.14,
+          "compareAtPrice": 6048.46,
+          "inventoryQuantity": 4511.59,
+          "weight": 7392.64,
+          "weightUnit": "string",
+          "requiresShipping": false,
+          "taxable": false,
+          "barcode": "string",
+          "imageId": 199.87,
+          "dimensions": {},
+          "createdAt": 391.87,
+          "updatedAt": 4417.11,
+          "active": false,
+          "deleted": false
+        }
+      ],
+      "options": [
+        {
+          "id": "string",
+          "productId": 9795.87,
+          "name": "string",
+          "values": [
+            "string"
+          ],
+          "createdAt": 1201.96,
+          "updatedAt": 3594.44
+        }
+      ],
+      "categories": [
+        "string"
+      ],
+      "tags": [
+        "string"
+      ],
+      "vendor": "string",
+      "inventoryQuantity": 2961.4,
+      "inventoryLocation": {
+        "locationId": "string",
+        "name": "string",
+        "address": {
+          "id": "string",
+          "contactId": "string",
+          "accountId": "string",
+          "firstName": "string",
+          "lastName": "string",
+          "name": "string",
+          "companyName": "string",
+          "email": "string",
+          "phone": "string",
+          "street": "string",
+          "addressLine2": "string",
+          "city": "string",
+          "province": "string",
+          "region": "string",
+          "postalCode": "string",
+          "postalCodeExtension": "string",
+          "country": "string",
+          "countryCode": "string",
+          "geoLocation": {
+            "latitude": 1187.27,
+            "longitude": 6886.61,
+            "altitude": 3179.83,
+            "accuracy": 8804.76,
+            "altitudeAccuracy": 4142.63,
+            "heading": 9182.36,
+            "speed": 641.47,
+            "timestamp": 2168.22
+          },
+          "customFields": [
+            {
+              "id": "string",
+              "fieldName": "string",
+              "fieldValue": "string"
+            }
+          ],
+          "subdivisionCode": "string"
+        },
+        "contactInformation": [
+          {}
+        ],
+        "quantity": 5666.02,
+        "operationalHours": "string",
+        "isActive": false,
+        "createdAt": 8651.03,
+        "updatedAt": 2653.89,
+        "deleted": false
+      },
+      "availableForSale": false,
+      "dimensions": {
+        "height": 5089.69,
+        "length": 5232.48,
+        "width": 9167.23
+      },
+      "weight": 939.4,
+      "weightUnit": "string",
+      "type": "string",
+      "metaTitle": "string",
+      "metaDescription": "string",
+      "seoKeywords": [
+        "string"
+      ],
+      "slug": "string",
+      "customFields": [
+        {
+          "id": "string",
+          "fieldName": "string",
+          "fieldValue": "string"
+        }
+      ],
+      "isDownloadable": false,
+      "downloadFiles": [
+        {
+          "id": "string",
+          "fileName": "string",
+          "fileSize": 5759.47,
+          "fileType": "string",
+          "url": "string",
+          "thumbnailUrl": "string",
+          "previewUrl": "string",
+          "content": "string",
+          "createdAt": 831.12,
+          "updatedAt": 9292.97,
+          "metadata": {},
+          "associatedWith": {},
+          "permissions": {}
+        }
+      ],
+      "relatedProducts": [
+        "string"
+      ],
+      "createdAt": 2777.18,
+      "updatedAt": 3185.69,
+      "publishedAt": 93.56,
+      "tax": {
+        "taxCode": "string",
+        "taxable": false,
+        "taxRate": 8423.42,
+        "currency": "string",
+        "country": "string",
+        "region": "string",
+        "description": "string",
+        "taxAmount": 1317.97,
+        "taxDetails": {},
+        "customFields": [
+            {
+              "id": "string",
+              "fieldName": "string",
+              "fieldValue": "string"
+            }
+          ],
+        "createdAt": 7163.27,
+        "updatedAt": 8413.86,
+        "active": false,
+        "deleted": false
+      },
+      "localizations": [
+        {
+          "locale": "string",
+          "title": "string",
+          "description": "string",
+          "metaTitle": "string",
+          "metaDescription": "string"
+        }
+      ]
+    },
+    "passthrough": {},
+    "meta": {
+        "timestamp": 289406,
+        "latency": 264730,
+        "platformRateLimitRemaining": 183191,
+        "rateLimitRemaining": 397821,
+        "cache": {
+          "hit": false,
+          "ttl": 586513,
+          "key": "string"
+        },
+        "transactionKey": "string",
+        "txn": "string",
+        "platform": "string",
+        "platformVersion": "string",
+        "connectionDefinitionKey": "string",
+        "action": "string",
+        "commonModel": "string",
+        "commonModelVersion": "string",
+        "connectionKey": "string",
+        "hash": "string",
+        "heartbeats": [
+          "string"
+        ],
+        "totalTransactions": 552822
+      }
+  }
+```
+</CH.Code>

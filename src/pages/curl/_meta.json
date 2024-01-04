@@ -1,0 +1,8 @@
+{
+  "-- resources": {
+    "title": "Resources",
+    "type": "separator"
+  },
+  "customers": "Customers",
+  "products": "Products"
+}

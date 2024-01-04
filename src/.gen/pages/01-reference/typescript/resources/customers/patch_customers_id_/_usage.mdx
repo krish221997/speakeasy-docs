@@ -1,0 +1,86 @@
+
+<CH.Code>
+```typescript PatchCustomersId.ts
+import { Client } from "integrationos/node";
+import { CustomerType, PatchCustomersIdType, PreferredContactMethod, Status } from "integrationos/node/models/operations";
+
+async function run() {
+  const sdk = new Client();
+
+  const id = "string";
+  const xIntegrationosSecret = "string";
+  const xIntegrationosConnectionKey = "string";
+  const requestBody = {
+    addresses: [
+      {
+        geoLocation: {},
+        customFields: [
+          {},
+        ],
+      },
+    ],
+    defaultAddress: {
+      geoLocation: {},
+      customFields: [
+        {},
+      ],
+    },
+    tags: [
+      "string",
+    ],
+    socialProfiles: [
+      {
+        additionalInfo: {},
+      },
+    ],
+  };
+  
+  const res = await sdk.customers.patchCustomersId(id, xIntegrationosSecret, xIntegrationosConnectionKey, requestBody);
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "status": "string",
+    "statusCode": 500,
+    "unified": {
+      "count": 461479
+    },
+    "passthrough": {},
+    "meta": {
+        "timestamp": 520478,
+        "latency": 780529,
+        "platformRateLimitRemaining": 678880,
+        "rateLimitRemaining": 118274,
+        "cache": {
+          "hit": false,
+          "ttl": 720633,
+          "key": "string"
+        },
+        "transactionKey": "string",
+        "txn": "string",
+        "platform": "string",
+        "platformVersion": "string",
+        "connectionDefinitionKey": "string",
+        "action": "string",
+        "commonModel": "string",
+        "commonModelVersion": "string",
+        "connectionKey": "string",
+        "hash": "string",
+        "heartbeats": [
+          "string"
+        ],
+        "totalTransactions": 639921
+      }
+  }
+```
+</CH.Code>

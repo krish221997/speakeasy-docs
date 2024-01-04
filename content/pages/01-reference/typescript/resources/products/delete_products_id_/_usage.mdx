@@ -1,0 +1,59 @@
+
+<CH.Code>
+```typescript DeleteProductsId.ts
+import { Client } from "integrationos/node";
+
+async function run() {
+  const sdk = new Client();
+
+  const id = "string";
+  const xIntegrationosSecret = "string";
+  const xIntegrationosConnectionKey = "string";
+  
+  const res = await sdk.products.deleteProductsId(id, xIntegrationosSecret, xIntegrationosConnectionKey);
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "status": "string",
+    "statusCode": 200,
+    "unified": {},
+    "passthrough": {},
+    "meta": {
+          "timestamp": 164940,
+          "latency": 828940,
+          "platformRateLimitRemaining": 369808,
+          "rateLimitRemaining": 4695,
+          "cache": {
+            "hit": false,
+            "ttl": 146441,
+            "key": "string"
+          },
+          "transactionKey": "string",
+          "txn": "string",
+          "platform": "string",
+          "platformVersion": "string",
+          "connectionDefinitionKey": "string",
+          "action": "string",
+          "commonModel": "string",
+          "commonModelVersion": "string",
+          "connectionKey": "string",
+          "hash": "string",
+          "heartbeats": [
+            "string"
+          ],
+          "totalTransactions": 677817
+        }
+  }
+```
+</CH.Code>

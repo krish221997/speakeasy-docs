@@ -1,0 +1,145 @@
+
+<CH.Code>
+```bash Example Request
+curl https://api.integrationos.com/v1/unified/customers/string \
+--header 'Accept: application/json' \
+--header 'X-INTEGRATIONOS-SECRET: string' \
+--header 'X-INTEGRATIONOS-CONNECTION-KEY: string'
+```
+---
+
+```json Example Response
+  {
+    "status": "string",
+    "statusCode": 400,
+    "unified": {
+      "id": "<ID>",
+      "title": "string",
+      "fullName": "string",
+      "firstName": "string",
+      "middleName": "string",
+      "lastName": "string",
+      "email": "Micheal_Sporer@yahoo.com",
+      "phoneNumber": "string",
+      "dateOfBirth": 5448.83,
+      "addresses": [
+        {
+          "id": "string",
+          "contactId": "string",
+          "accountId": "string",
+          "firstName": "string",
+          "lastName": "string",
+          "name": "string",
+          "companyName": "string",
+          "email": "string",
+          "phone": "string",
+          "street": "string",
+          "addressLine2": "string",
+          "city": "string",
+          "province": "string",
+          "region": "string",
+          "postalCode": "string",
+          "postalCodeExtension": "string",
+          "country": "string",
+          "countryCode": "string",
+          "geoLocation": {},
+          "customFields": [
+              {}
+            ],
+          "subdivisionCode": "string"
+        }
+      ],
+      "defaultAddress": {
+        "id": "string",
+        "contactId": "string",
+        "accountId": "string",
+        "firstName": "string",
+        "lastName": "string",
+        "name": "string",
+        "companyName": "string",
+        "email": "string",
+        "phone": "string",
+        "street": "string",
+        "addressLine2": "string",
+        "city": "string",
+        "province": "string",
+        "region": "string",
+        "postalCode": "string",
+        "postalCodeExtension": "string",
+        "country": "string",
+        "countryCode": "string",
+        "geoLocation": {
+          "latitude": 6235.64,
+          "longitude": 6458.94,
+          "altitude": 3843.82,
+          "accuracy": 4375.87,
+          "altitudeAccuracy": 2975.34,
+          "heading": 8917.73,
+          "speed": 567.13,
+          "timestamp": 9636.63
+        },
+        "customFields": [
+          {
+            "id": "string",
+            "fieldName": "string",
+            "fieldValue": "string"
+          }
+        ],
+        "subdivisionCode": "string"
+      },
+      "company": "Kreiger - Schiller",
+      "currency": "New Taiwan Dollar",
+      "notes": "string",
+      "createdAt": 5288.95,
+      "updatedAt": 4799.77,
+      "customerSegment": "string",
+      "loyaltyProgramMembership": "string",
+      "tags": [
+        "string"
+      ],
+      "metadata": "string",
+      "socialProfiles": [
+        {
+          "username": "string",
+          "displayName": "string",
+          "url": "string",
+          "avatarUrl": "string",
+          "email": "string",
+          "additionalInfo": {},
+          "createdAt": 710.36,
+          "updatedAt": 3373.96,
+          "active": false,
+          "deleted": false
+        }
+      ],
+      "source": "string"
+    },
+    "passthrough": {},
+    "meta": {
+        "timestamp": 87129,
+        "latency": 648172,
+        "platformRateLimitRemaining": 20218,
+        "rateLimitRemaining": 368241,
+        "cache": {
+          "hit": false,
+          "ttl": 832620,
+          "key": "string"
+        },
+        "transactionKey": "string",
+        "txn": "string",
+        "platform": "string",
+        "platformVersion": "string",
+        "connectionDefinitionKey": "string",
+        "action": "string",
+        "commonModel": "string",
+        "commonModelVersion": "string",
+        "connectionKey": "string",
+        "hash": "string",
+        "heartbeats": [
+          "string"
+        ],
+        "totalTransactions": 957156
+      }
+  }
+```
+</CH.Code>

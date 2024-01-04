@@ -1,0 +1,60 @@
+
+<CH.Code>
+```typescript GetCustomersCount.ts
+import { Client } from "integrationos/node";
+
+async function run() {
+  const sdk = new Client();
+
+  const xIntegrationosSecret = "string";
+  const xIntegrationosConnectionKey = "string";
+  
+  const res = await sdk.customers.getCustomersCount(xIntegrationosSecret, xIntegrationosConnectionKey);
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "status": "string",
+    "statusCode": 200,
+    "unified": {
+      "count": 138183
+    },
+    "passthrough": {},
+    "meta": {
+        "timestamp": 778346,
+        "latency": 196582,
+        "platformRateLimitRemaining": 949572,
+        "rateLimitRemaining": 368725,
+        "cache": {
+          "hit": false,
+          "ttl": 662527,
+          "key": "string"
+        },
+        "transactionKey": "string",
+        "txn": "string",
+        "platform": "string",
+        "platformVersion": "string",
+        "connectionDefinitionKey": "string",
+        "action": "string",
+        "commonModel": "string",
+        "commonModelVersion": "string",
+        "connectionKey": "string",
+        "hash": "string",
+        "heartbeats": [
+          "string"
+        ],
+        "totalTransactions": 820994
+      }
+  }
+```
+</CH.Code>

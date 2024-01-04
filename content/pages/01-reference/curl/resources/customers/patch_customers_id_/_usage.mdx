@@ -1,0 +1,47 @@
+
+<CH.Code>
+```bash Example Request
+curl https://api.integrationos.com/v1/unified/customers/string \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'X-INTEGRATIONOS-SECRET: string' \
+--header 'X-INTEGRATIONOS-CONNECTION-KEY: string'
+```
+---
+
+```json Example Response
+  {
+    "status": "string",
+    "statusCode": 500,
+    "unified": {
+      "count": 461479
+    },
+    "passthrough": {},
+    "meta": {
+        "timestamp": 520478,
+        "latency": 780529,
+        "platformRateLimitRemaining": 678880,
+        "rateLimitRemaining": 118274,
+        "cache": {
+          "hit": false,
+          "ttl": 720633,
+          "key": "string"
+        },
+        "transactionKey": "string",
+        "txn": "string",
+        "platform": "string",
+        "platformVersion": "string",
+        "connectionDefinitionKey": "string",
+        "action": "string",
+        "commonModel": "string",
+        "commonModelVersion": "string",
+        "connectionKey": "string",
+        "hash": "string",
+        "heartbeats": [
+          "string"
+        ],
+        "totalTransactions": 639921
+      }
+  }
+```
+</CH.Code>

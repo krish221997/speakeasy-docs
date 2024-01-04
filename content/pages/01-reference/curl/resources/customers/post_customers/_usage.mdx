@@ -1,0 +1,146 @@
+
+<CH.Code>
+```bash Example Request
+curl https://api.integrationos.com/v1/unified/customers \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'X-INTEGRATIONOS-SECRET: string' \
+--header 'X-INTEGRATIONOS-CONNECTION-KEY: string'
+```
+---
+
+```json Example Response
+  {
+    "status": "string",
+    "statusCode": 400,
+    "unified": {
+      "id": "<ID>",
+      "title": "string",
+      "fullName": "string",
+      "firstName": "string",
+      "middleName": "string",
+      "lastName": "string",
+      "email": "Cecilia.Ebert@hotmail.com",
+      "phoneNumber": "string",
+      "dateOfBirth": 7506.86,
+      "addresses": [
+        {
+          "id": "string",
+          "contactId": "string",
+          "accountId": "string",
+          "firstName": "string",
+          "lastName": "string",
+          "name": "string",
+          "companyName": "string",
+          "email": "string",
+          "phone": "string",
+          "street": "string",
+          "addressLine2": "string",
+          "city": "string",
+          "province": "string",
+          "region": "string",
+          "postalCode": "string",
+          "postalCodeExtension": "string",
+          "country": "string",
+          "countryCode": "string",
+          "geoLocation": {},
+          "customFields": [
+              {}
+            ],
+          "subdivisionCode": "string"
+        }
+      ],
+      "defaultAddress": {
+        "id": "string",
+        "contactId": "string",
+        "accountId": "string",
+        "firstName": "string",
+        "lastName": "string",
+        "name": "string",
+        "companyName": "string",
+        "email": "string",
+        "phone": "string",
+        "street": "string",
+        "addressLine2": "string",
+        "city": "string",
+        "province": "string",
+        "region": "string",
+        "postalCode": "string",
+        "postalCodeExtension": "string",
+        "country": "string",
+        "countryCode": "string",
+        "geoLocation": {
+          "latitude": 3637.11,
+          "longitude": 3250.47,
+          "altitude": 5701.97,
+          "accuracy": 384.25,
+          "altitudeAccuracy": 4386.01,
+          "heading": 6342.74,
+          "speed": 9883.74,
+          "timestamp": 9589.5
+        },
+        "customFields": [
+          {
+            "id": "string",
+            "fieldName": "string",
+            "fieldValue": "string"
+          }
+        ],
+        "subdivisionCode": "string"
+      },
+      "company": "Durgan - Nicolas",
+      "currency": "Chilean Peso",
+      "notes": "string",
+      "createdAt": 9953,
+      "updatedAt": 6531.08,
+      "customerSegment": "string",
+      "loyaltyProgramMembership": "string",
+      "tags": [
+        "string"
+      ],
+      "metadata": "string",
+      "socialProfiles": [
+        {
+          "username": "string",
+          "displayName": "string",
+          "url": "string",
+          "avatarUrl": "string",
+          "email": "string",
+          "additionalInfo": {},
+          "createdAt": 4746.97,
+          "updatedAt": 2444.25,
+          "active": false,
+          "deleted": false
+        }
+      ],
+      "source": "string"
+    },
+    "passthrough": {},
+    "meta": {
+        "timestamp": 623510,
+        "latency": 158969,
+        "platformRateLimitRemaining": 338007,
+        "rateLimitRemaining": 110375,
+        "cache": {
+          "hit": false,
+          "ttl": 674752,
+          "key": "string"
+        },
+        "transactionKey": "string",
+        "txn": "string",
+        "platform": "string",
+        "platformVersion": "string",
+        "connectionDefinitionKey": "string",
+        "action": "string",
+        "commonModel": "string",
+        "commonModelVersion": "string",
+        "connectionKey": "string",
+        "hash": "string",
+        "heartbeats": [
+          "string"
+        ],
+        "totalTransactions": 656330
+      }
+  }
+```
+</CH.Code>

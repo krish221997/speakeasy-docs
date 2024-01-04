@@ -1,0 +1,8 @@
+{
+  "get_products_id_": "Get Products Id ",
+  "delete_products_id_": "Delete Products Id ",
+  "patch_products_id_": "Patch Products Id ",
+  "get_products": "Get Products",
+  "post_products": "Post Products",
+  "get_products_count": "Get Products Count"
+}

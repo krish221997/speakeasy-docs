@@ -1,0 +1,134 @@
+
+<CH.Code>
+```typescript PatchProductsId.ts
+import { Client } from "integrationos/node";
+import {
+  PatchProductsIdProductsStatus,
+  PatchProductsIdProductsType,
+  PatchProductsIdType,
+  SkuValidation,
+} from "integrationos/node/models/operations";
+
+async function run() {
+  const sdk = new Client();
+
+  const id = "string";
+  const xIntegrationosSecret = "string";
+  const xIntegrationosConnectionKey = "string";
+  const requestBody = {
+    prices: [
+      {},
+    ],
+    images: [
+      {
+        tags: [
+          "string",
+        ],
+      },
+    ],
+    variants: [
+      {
+        dimensions: {},
+      },
+    ],
+    options: [
+      {
+        values: [
+          "string",
+        ],
+      },
+    ],
+    categories: [
+      "string",
+    ],
+    tags: [
+      "string",
+    ],
+    inventoryLocation: {
+      address: {
+        geoLocation: {},
+        customFields: [
+          {},
+        ],
+      },
+      contactInformation: [
+        {},
+      ],
+    },
+    dimensions: {},
+    seoKeywords: [
+      "string",
+    ],
+    customFields: [
+      {},
+    ],
+    downloadFiles: [
+      {
+        metadata: {},
+        associatedWith: {},
+        permissions: {},
+      },
+    ],
+    relatedProducts: [
+      "string",
+    ],
+    tax: {
+      taxDetails: {},
+      customFields: [
+        {},
+      ],
+    },
+    localizations: [
+      {},
+    ],
+  };
+  
+  const res = await sdk.products.patchProductsId(id, xIntegrationosSecret, xIntegrationosConnectionKey, requestBody);
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "status": "string",
+    "statusCode": 400,
+    "unified": {
+      "count": 270008
+    },
+    "passthrough": {},
+    "meta": {
+        "timestamp": 703737,
+        "latency": 735194,
+        "platformRateLimitRemaining": 288476,
+        "rateLimitRemaining": 962189,
+        "cache": {
+          "hit": false,
+          "ttl": 433288,
+          "key": "string"
+        },
+        "transactionKey": "string",
+        "txn": "string",
+        "platform": "string",
+        "platformVersion": "string",
+        "connectionDefinitionKey": "string",
+        "action": "string",
+        "commonModel": "string",
+        "commonModelVersion": "string",
+        "connectionKey": "string",
+        "hash": "string",
+        "heartbeats": [
+          "string"
+        ],
+        "totalTransactions": 248753
+      }
+  }
+```
+</CH.Code>

@@ -1,0 +1,8 @@
+{
+  "get_customers_id_": "Get Customers Id ",
+  "delete_customers_id_": "Delete Customers Id ",
+  "patch_customers_id_": "Patch Customers Id ",
+  "get_customers": "Get Customers",
+  "post_customers": "Post Customers",
+  "get_customers_count": "Get Customers Count"
+}

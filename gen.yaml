@@ -1,0 +1,51 @@
+configVersion: 1.0.0
+generation:
+  comments: {}
+  sdkClassName: Client
+  maintainOpenAPIOrder: true
+  usageSnippets:
+    optionalPropertyRendering: withExample
+  useClassNamesForArrayFields: true
+  fixes:
+    nameResolutionDec2023: true
+features:
+  docs:
+    core: 1.21.0
+    globalServerURLs: 0.1.1
+  typescript:
+    core: 3.3.12
+    flattening: 2.81.1
+    globalServerURLs: 2.82.1
+docs:
+  version: ""
+  defaultLanguage: typescript
+  imports:
+    option: openapi
+    paths:
+      callbacks: callbacks
+      errors: errors
+      operations: operations
+      shared: shared
+      webhooks: webhooks
+  inputModelSuffix: input
+  outputModelSuffix: output
+  packageName: integrationos/node
+  static: true
+typescript:
+  version: 0.0.1
+  author: IntegrationOS
+  clientServerStatusCodesAsErrors: true
+  flattenGlobalSecurity: true
+  imports:
+    option: openapi
+    paths:
+      callbacks: models/callbacks
+      errors: models/errors
+      operations: models/operations
+      shared: models/components
+      webhooks: models/webhooks
+  inputModelSuffix: input
+  maxMethodParams: 4
+  outputModelSuffix: output
+  packageName: integrationos/node
+  templateVersion: v2
